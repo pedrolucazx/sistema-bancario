@@ -8,7 +8,6 @@ import bank.service.BankService;
 
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -66,7 +65,7 @@ public class Main {
             return;
         }
 
-        String  name          = readString("Nome do titular: ");
+        String  name          = readString();
         int     accountNumber = bank.generateAccountNumber();
         Account account;
 
@@ -168,9 +167,9 @@ public class Main {
         }
     }
 
-    private static String readString(String prompt) {
+    private static String readString() {
         while (true) {
-            System.out.print(prompt);
+            System.out.print("Nome do titular: ");
             String value = scanner.nextLine().trim();
             if (!value.isEmpty()) return value;
             printError("O campo não pode estar vazio.");

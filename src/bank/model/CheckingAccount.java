@@ -22,9 +22,7 @@ public class CheckingAccount extends Account {
         }
         balance -= amount;
     }
-
-    public double getOverdraftLimit() { return overdraftLimit; }
-
+    
     @Override
     public String toString() {
         return super.toString()

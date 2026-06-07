@@ -24,9 +24,7 @@ public abstract class Account {
     public abstract void withdraw(double amount) throws BankException;
 
     public int    getAccountNumber() { return accountNumber; }
-    public String getHolderName()    { return holderName; }
-    public double getBalance()       { return balance; }
-
+    
     @Override
     public String toString() {
         return String.format("Conta %-6d | Titular: %-20s | Saldo: R$ %10.2f",
